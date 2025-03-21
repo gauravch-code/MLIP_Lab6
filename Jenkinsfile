@@ -13,13 +13,8 @@ pipeline {
         stage('Test') {
             steps {
                 bat '''
-                echo "Test Step: We run testing tool like pytest here"
-
-                rem Example if using Miniconda:
-                rem "C:\\Users\\YourName\\miniconda3\\Scripts\\conda.exe" run -n mlip pytest
-
-                echo "pytest not run"
-                exit 1  rem Remove or comment out this line once you add the real pytest command
+                echo "Test Step: Running pytest using venv"
+                mlip\\Scripts\\python.exe -m pytest
                 '''
             }
         }
