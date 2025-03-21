@@ -13,15 +13,8 @@ pipeline {
         stage('Test') {
             steps {
                 bat '''
-                echo "Test Step: Creating virtual environment"
-                py -m venv mlip
-
-                echo "Activating venv and installing dependencies"
-                mlip\\Scripts\\pip install --upgrade pip
-                mlip\\Scripts\\pip install pytest numpy pandas scikit-learn
-
-                echo "Running tests using venv"
-                mlip\\Scripts\\python.exe -m pytest
+                echo "Running tests using the existing virtual environment"
+                "C:\\Users\\gaura\\mlip\\Scripts\\python.exe" -m pytest
                 '''
             }
         }
