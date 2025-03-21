@@ -39,6 +39,3 @@ def test_data_split(feature_target_sample):
     return_tuple = data_split(*feature_target_sample)
     # Test if the length of return_tuple is 4
     assert len(return_tuple) == 4
-
-
-    raise NotImplemented
