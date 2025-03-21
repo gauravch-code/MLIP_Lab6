@@ -14,7 +14,7 @@ pipeline {
             steps {
                 bat '''
                 echo "Test Step: Creating virtual environment"
-                python -m venv mlip
+                py -m venv mlip
 
                 echo "Activating venv and installing dependencies"
                 mlip\\Scripts\\pip install --upgrade pip
